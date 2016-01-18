@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+    title Fågelkvitter
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/signin.css', rel='stylesheet')
+    body
+        .container
+            form#loginForm.form-signin(role='form', action='/validate-user')
+                .form-group
+                    h2.form-signin-heading Please sign in
+                    input#username.form-control(name='user' type='text', placeholder='Username', required='required', autofocus='autofocus')
+                    input#password.form-control(name='pass' type='password', placeholder='Password', required='required')
+                    #error.alert.alert-danger
+                    button#login.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+                    button.btn.btn-lg.btn-primary.btn-block(id='register' type='button') Register
+                    
+        script(src='/js/kvitter.js')

@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib-cov/routes/users.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">lib-cov/routes/</a> users.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.51% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>67/154</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">15.38% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.51% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/154</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* automatically generated by JSCoverage - do not edit */
+try {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof top === 'object' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >top !== null </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >typeof top.opener === 'object' </span>&amp;&amp; <span class="branch-3 cbranch-no" title="branch not covered" >top.opener !== null)</span> {
+    // this is a browser window that was opened from another window
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (! top.opener._$jscoverage) {</span>
+<span class="cstat-no" title="statement not covered" >      top.opener._$jscoverage = {};</span>
+    }
+  }
+}
+catch (e) {}
+&nbsp;
+try {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof top === 'object' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >top !== null)</span> {
+    // this is a browser window
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof top.opener === 'object' &amp;&amp; top.opener !== null &amp;&amp; top.opener._$jscoverage) {</span>
+<span class="cstat-no" title="statement not covered" >        top._$jscoverage = top.opener._$jscoverage;</span>
+      }
+    }
+    catch (e) {}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (! top._$jscoverage) {</span>
+<span class="cstat-no" title="statement not covered" >      top._$jscoverage = {};</span>
+    }
+  }
+}
+catch (e) {}
+&nbsp;
+try {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof top === 'object' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >top !== null </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >top._$jscoverage)</span> {
+<span class="cstat-no" title="statement not covered" >    _$jscoverage = top._$jscoverage;</span>
+  }
+}
+catch (e) {}
+<span class="missing-if-branch" title="if path not taken" >I</span>if (typeof _$jscoverage !== 'object') {
+<span class="cstat-no" title="statement not covered" >  _$jscoverage = {};</span>
+}
+<span class="missing-if-branch" title="else path not taken" >E</span>if (! _$jscoverage['routes/users.js']) {
+  _$jscoverage['routes/users.js'] = [];
+  _$jscoverage['routes/users.js'][1] = 0;
+  _$jscoverage['routes/users.js'][2] = 0;
+  _$jscoverage['routes/users.js'][4] = 0;
+  _$jscoverage['routes/users.js'][6] = 0;
+  _$jscoverage['routes/users.js'][7] = 0;
+  _$jscoverage['routes/users.js'][8] = 0;
+  _$jscoverage['routes/users.js'][10] = 0;
+  _$jscoverage['routes/users.js'][11] = 0;
+  _$jscoverage['routes/users.js'][12] = 0;
+  _$jscoverage['routes/users.js'][13] = 0;
+  _$jscoverage['routes/users.js'][14] = 0;
+  _$jscoverage['routes/users.js'][16] = 0;
+  _$jscoverage['routes/users.js'][17] = 0;
+  _$jscoverage['routes/users.js'][21] = 0;
+  _$jscoverage['routes/users.js'][22] = 0;
+  _$jscoverage['routes/users.js'][27] = 0;
+  _$jscoverage['routes/users.js'][28] = 0;
+  _$jscoverage['routes/users.js'][29] = 0;
+  _$jscoverage['routes/users.js'][30] = 0;
+  _$jscoverage['routes/users.js'][32] = 0;
+  _$jscoverage['routes/users.js'][33] = 0;
+  _$jscoverage['routes/users.js'][35] = 0;
+  _$jscoverage['routes/users.js'][36] = 0;
+  _$jscoverage['routes/users.js'][37] = 0;
+  _$jscoverage['routes/users.js'][38] = 0;
+  _$jscoverage['routes/users.js'][39] = 0;
+  _$jscoverage['routes/users.js'][41] = 0;
+  _$jscoverage['routes/users.js'][42] = 0;
+  _$jscoverage['routes/users.js'][46] = 0;
+  _$jscoverage['routes/users.js'][51] = 0;
+  _$jscoverage['routes/users.js'][52] = 0;
+  _$jscoverage['routes/users.js'][53] = 0;
+  _$jscoverage['routes/users.js'][54] = 0;
+  _$jscoverage['routes/users.js'][56] = 0;
+  _$jscoverage['routes/users.js'][57] = 0;
+  _$jscoverage['routes/users.js'][59] = 0;
+  _$jscoverage['routes/users.js'][60] = 0;
+  _$jscoverage['routes/users.js'][61] = 0;
+  _$jscoverage['routes/users.js'][62] = 0;
+  _$jscoverage['routes/users.js'][63] = 0;
+  _$jscoverage['routes/users.js'][71] = 0;
+  _$jscoverage['routes/users.js'][72] = 0;
+  _$jscoverage['routes/users.js'][74] = 0;
+  _$jscoverage['routes/users.js'][79] = 0;
+  _$jscoverage['routes/users.js'][83] = 0;
+}
+_$jscoverage['routes/users.js'].source = ["var express = require('express');","var router = express.Router();","","function checkUser(userData, user, res, req) {","","\tif (userData.friends.length == 0) {","\t\tres.render('add-friend', {title: 'Add' + userData.username + 'as a friend'});","\t\treturn;","\t}","    for (var index in userData.friends) {","  \t\tif (userData.friends[index] == user) {","  \t\t\treq.db.findUser(user, function(err, result) {","  \t\t\t\tif (err) {","  \t\t\t\t\tconsole.log(err);","\t\t\t\t}","\t\t\t\tuserData = result;","\t\t\t\tres.render('users', { title: req.session.user,","\t\t\t\tmessages: userData.messages.reverse(), user: userData.username + \"'s Posts\", friends: userData.friends});","  \t\t\t});","\t\t}","\t\telse if (index &amp;gt;= userData.friends.length -1) {","\t\t\tres.render('add-friend', {title: userData.username + userData.username + 'as a friend'});","\t\t}","\t}","}","","router.get('/:user', function(req, res) {","    req.db.findUser(req.session.user, function (err, result) {","\t    if (err) {","\t        console.log(err);","\t    }","\t    if (result == null) {","\t        res.redirect('/login');","\t    }","\t    else if (req.sessionID == result.sid) {","    \t\tuser = req.params.user;","\t\t\treq.db.findSid(req.sessionID, function (err, result){","\t\t\t\tif (err) {","\t\t  \t\t  console.log(err);","\t\t      \t}","\t\t      \tuserData = result;","\t\t  \t\tcheckUser(userData, user, res, req);","\t\t\t});","\t    }","\t    else {","\t        res.redirect('/login');","\t    }","    });"," });","","router.post('/add/:user', function(req, res) {","    req.db.findUser(req.session.user, function (err, result) {","        if (err) {","            console.log(err);","        }","        if (result == null) {","            res.redirect('/login');","        }","        else if (req.sessionID == result.sid) {","    \t\tvar user = req.session.user;","\t\t\tvar friend = req.params.user;","\t\t\treq.db.getColl(function (err, result) {","\t\t\t\tresult.findAndModify(","\t\t\t\t\t{'username':user},","\t\t\t\t    [],","\t\t\t\t    {","\t\t\t\t        $push: {","\t\t\t\t            friends: friend","\t\t\t\t        }","\t\t\t\t    }, function(err, result) {","\t\t\t\t        if (err) {","\t\t\t\t            console.log(err);","\t\t\t\t        }","\t\t\t\t        res.end();","\t    \t\t});","\t\t\t});","        }","        else {","            res.redirect('/login');","        }","    });","});","module.exports = router;"];
+_$jscoverage['routes/users.js'][1]++;
+var express = require("express");
+_$jscoverage['routes/users.js'][2]++;
+var router = express.Router();
+_$jscoverage['routes/users.js'][4]++;
+<span class="fstat-no" title="function not covered" >function checkUser(userData, user, res, req) {</span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][6]++;</span>
+<span class="cstat-no" title="statement not covered" >  if ((userData.friends.length == 0)) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][7]++;</span>
+<span class="cstat-no" title="statement not covered" >    res.render("add-friend", {title: ("Add" + userData.username + "as a friend")});</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][8]++;</span>
+<span class="cstat-no" title="statement not covered" >    return;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][10]++;</span>
+<span class="cstat-no" title="statement not covered" >  for (var index in userData.friends) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][11]++;</span>
+<span class="cstat-no" title="statement not covered" >    if ((userData.friends[index] == user)) {</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][12]++;</span>
+<span class="cstat-no" title="statement not covered" >      req.db.findUser(user, (<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][13]++;</span>
+<span class="cstat-no" title="statement not covered" >  if (err) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][14]++;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(err);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][16]++;</span>
+<span class="cstat-no" title="statement not covered" >  userData = result;</span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][17]++;</span>
+<span class="cstat-no" title="statement not covered" >  res.render("users", {title: req.session.user, messages: userData.messages.reverse(), user: (userData.username + "'s Posts"), friends: userData.friends});</span>
+}));
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][21]++;</span>
+<span class="cstat-no" title="statement not covered" >      if ((index &gt;= (userData.friends.length - 1))) {</span>
+<span class="cstat-no" title="statement not covered" >        _$jscoverage['routes/users.js'][22]++;</span>
+<span class="cstat-no" title="statement not covered" >        res.render("add-friend", {title: (userData.username + userData.username + "as a friend")});</span>
+      }
+    }
+}
+}
+_$jscoverage['routes/users.js'][27]++;
+router.get("/:user", (<span class="fstat-no" title="function not covered" >function (req, res) {</span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][28]++;</span>
+<span class="cstat-no" title="statement not covered" >  req.db.findUser(req.session.user, (<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][29]++;</span>
+<span class="cstat-no" title="statement not covered" >  if (err) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][30]++;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(err);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][32]++;</span>
+<span class="cstat-no" title="statement not covered" >  if ((result == null)) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][33]++;</span>
+<span class="cstat-no" title="statement not covered" >    res.redirect("/login");</span>
+  }
+  else {
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][35]++;</span>
+<span class="cstat-no" title="statement not covered" >    if ((req.sessionID == result.sid)) {</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][36]++;</span>
+<span class="cstat-no" title="statement not covered" >      user = req.params.user;</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][37]++;</span>
+<span class="cstat-no" title="statement not covered" >      req.db.findSid(req.sessionID, (<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][38]++;</span>
+<span class="cstat-no" title="statement not covered" >  if (err) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][39]++;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(err);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][41]++;</span>
+<span class="cstat-no" title="statement not covered" >  userData = result;</span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][42]++;</span>
+<span class="cstat-no" title="statement not covered" >  checkUser(userData, user, res, req);</span>
+}));
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][46]++;</span>
+<span class="cstat-no" title="statement not covered" >      res.redirect("/login");</span>
+    }
+  }
+}));
+}));
+_$jscoverage['routes/users.js'][51]++;
+router.post("/add/:user", (<span class="fstat-no" title="function not covered" >function (req, res) {</span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][52]++;</span>
+<span class="cstat-no" title="statement not covered" >  req.db.findUser(req.session.user, (<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][53]++;</span>
+<span class="cstat-no" title="statement not covered" >  if (err) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][54]++;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(err);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][56]++;</span>
+<span class="cstat-no" title="statement not covered" >  if ((result == null)) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][57]++;</span>
+<span class="cstat-no" title="statement not covered" >    res.redirect("/login");</span>
+  }
+  else {
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][59]++;</span>
+<span class="cstat-no" title="statement not covered" >    if ((req.sessionID == result.sid)) {</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][60]++;</span>
+<span class="cstat-no" title="statement not covered" >      var user = req.session.user;</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][61]++;</span>
+<span class="cstat-no" title="statement not covered" >      var friend = req.params.user;</span>
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][62]++;</span>
+<span class="cstat-no" title="statement not covered" >      req.db.getColl((<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][63]++;</span>
+<span class="cstat-no" title="statement not covered" >  result.findAndModify({"username": user}, [], {$push: {friends: friend}}, (<span class="fstat-no" title="function not covered" >function (err, result) {</span></span>
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][71]++;</span>
+<span class="cstat-no" title="statement not covered" >  if (err) {</span>
+<span class="cstat-no" title="statement not covered" >    _$jscoverage['routes/users.js'][72]++;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(err);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  _$jscoverage['routes/users.js'][74]++;</span>
+<span class="cstat-no" title="statement not covered" >  res.end();</span>
+}));
+}));
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      _$jscoverage['routes/users.js'][79]++;</span>
+<span class="cstat-no" title="statement not covered" >      res.redirect("/login");</span>
+    }
+  }
+}));
+}));
+_$jscoverage['routes/users.js'][83]++;
+module.exports = router;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 14 2016 15:51:15 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

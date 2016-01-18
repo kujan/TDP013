@@ -1,0 +1,61 @@
+extends layout
+
+block content
+    .container
+        script(src='/js/kvitter.js')
+        nav.navbar.navbar-default.navbar-inverse(role='navigation')
+            .container-fluid
+                .navbar-header
+                    a.navbar-brand(href='/') Kvitter
+                .collapse.navbar-collapse
+                    form#msgForm.navbar-form.navbar-left
+                        .form-group
+                            input#msgQuery.form-control.col-lg-3(type='text', placeholder='Post message')
+                            button#msgSubmit.btn.btn-default(type='submit') Submit
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a#logOut(href='/logout') Log out
+                    ul.nav.navbar-text.navbar-right
+                        li
+                            #current-user.p Logged in as #{currentUser}
+
+                    
+                    form#searchForm.navbar-form.navbar-right(role='search')
+                        .form-group
+                            
+                            input#searchQuery.form-control(type='text', placeholder='Search users')
+                            button#searchSubmit.btn.btn-default(type='submit') Submit
+                #error.alert.alert-danger
+    
+
+
+        .col-md-2.column
+
+            #searchBoxPanel.panel.panel-default
+                .panel-heading
+                    h3.panel-title Search results
+                #searchBox.panel-body
+
+            .panel.panel-default
+                .panel-heading 
+                    h3.panel-title Friendlist
+                .panel-body
+                    each friend in friends
+                        a(href='./users/#{friend}')= friend
+                            br
+                                          
+        .col-md-10.column
+          .panel.panel-default
+            .panel-heading
+              h3.panel-title Your Messages
+             #user-messages.panel-body
+                each msg in messages
+                    .panel.panel-default
+                        .panel-heading
+                            a(href='./users/#{msg.poster}')
+                                h3.panel-title From: #{msg.poster}
+                        p(style='margin:5px')= msg.message
+            
+            .panel-footer
+
+        
